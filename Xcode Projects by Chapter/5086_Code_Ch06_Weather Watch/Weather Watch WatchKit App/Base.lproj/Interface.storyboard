@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Weather_Watch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Show Me The Weather" id="D8j-Hd-ItJ">
+                            <connections>
+                                <action selector="getWeatherButtonTapped" destination="AgC-eL-Hgc" id="mdr-xb-xR3"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="getWeatherButton" destination="D8j-Hd-ItJ" id="OIR-UB-ojk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="169" y="218"/>
+        </scene>
+        <!--WeatherTableInterfaceController-->
+        <scene sceneID="rh2-4Z-LMe">
+            <objects>
+                <controller identifier="WeatherTableInterfaceController" id="Zun-d4-pjE" customClass="WeatherTableInterfaceController" customModule="Weather_Watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="Bh9-S3-C9u">
+                            <items>
+                                <tableRow identifier="TableRowControllerID" id="qgq-5o-vj3" customClass="WeatherTableRow" customModule="Weather_Watch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="dVH-cr-IYz">
+                                        <items>
+                                            <label alignment="left" text="Label" id="SUA-GU-YbD"/>
+                                            <label alignment="left" text="Label" id="RjX-f2-CiU"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lowerLabel" destination="RjX-f2-CiU" id="qsR-td-JSG"/>
+                                        <outlet property="upperLabel" destination="SUA-GU-YbD" id="34t-RS-l7Q"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="weatherTable" destination="Bh9-S3-C9u" id="ZH3-G0-Dc2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="388" y="218"/>
+        </scene>
+        <!--DetailsInterface-->
+        <scene sceneID="bjx-pg-uTs">
+            <objects>
+                <controller identifier="DetailsInterface" id="lrO-lQ-ZUr" customClass="DetailsInterfaceController" customModule="Weather_Watch_WatchKit_Extension">
+                    <items>
+                        <imageView width="0.5" height="0.20000000000000001" alignment="center" contentMode="scaleAspectFit" id="tuJ-Lq-A5h"/>
+                        <label width="1" alignment="center" text="Label" numberOfLines="0" id="sAF-7J-71Z"/>
+                    </items>
+                    <connections>
+                        <outlet property="detailsLabel" destination="sAF-7J-71Z" id="gWY-0l-KbF"/>
+                        <outlet property="image" destination="tuJ-Lq-A5h" id="uYo-5a-A9P"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="570" y="217"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" topTemplateType="body3" bottomTemplateType="body6Footer" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Weather_Watch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Fetching Data" id="595-Yi-wiu"/>
+                        <label alignment="left" id="6zG-hm-bdt"/>
+                        <label alignment="left" text="More Cities..." id="kku-Ju-lsE"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="bottomLabel" destination="6zG-hm-bdt" id="lEO-GC-r2H"/>
+                        <outlet property="topLabel" destination="595-Yi-wiu" id="pnJ-JD-IB0"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="169" y="445"/>
+        </scene>
+    </scenes>
+</document>

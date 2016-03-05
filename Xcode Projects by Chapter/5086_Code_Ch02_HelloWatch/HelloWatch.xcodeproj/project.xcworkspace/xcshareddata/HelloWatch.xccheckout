@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FE272439-27FC-482D-88CE-84578412282A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloWatch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C0EC6B95E78BCD0BF554CF38795979E011D6A99E</key>
+		<string>https://github.com/codingTheHole/theBook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Chapters/Ch2/HelloWatch/HelloWatch.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C0EC6B95E78BCD0BF554CF38795979E011D6A99E</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/codingTheHole/theBook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C0EC6B95E78BCD0BF554CF38795979E011D6A99E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0EC6B95E78BCD0BF554CF38795979E011D6A99E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>theBook</string>
+		</dict>
+	</array>
+</dict>
+</plist>

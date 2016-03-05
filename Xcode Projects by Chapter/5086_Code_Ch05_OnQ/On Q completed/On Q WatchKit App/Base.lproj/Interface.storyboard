@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MYa-ht-dp4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Prompts Interface Controller-->
+        <scene sceneID="2QD-Wz-cVz">
+            <objects>
+                <controller id="MYa-ht-dp4" customClass="PromptsInterfaceController" customModule="On_Q_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" hidden="YES" layout="vertical" id="1bh-hy-aMz">
+                            <items>
+                                <group width="1" height="0.55000000000000004" alignment="left" id="0tv-3M-tYS" userLabel="Prompt Label Group">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Label" numberOfLines="0" id="GOm-u3-faf"/>
+                                    </items>
+                                </group>
+                                <label alignment="right" verticalAlignment="bottom" text="Label" id="Z1b-uE-Eyi"/>
+                                <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" id="ZMH-pU-PAg" userLabel="Buttons Group">
+                                    <items>
+                                        <button width="0.5" alignment="left" verticalAlignment="center" title="&lt;" id="bTA-5O-sUL">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="28"/>
+                                            <connections>
+                                                <action selector="backwardButtonTapped" destination="MYa-ht-dp4" id="EcJ-DS-yqD"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.5" alignment="right" verticalAlignment="center" title="&gt;" id="b22-oM-dJA">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="28"/>
+                                            <connections>
+                                                <action selector="forwardButtonTapped" destination="MYa-ht-dp4" id="o1y-ct-Z74"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="center" backgroundImage="ch5RedBg" radius="8" id="5ck-bC-com">
+                            <items>
+                                <button width="1" height="1" alignment="left" title="Start Prompting" id="VuR-Co-qXU">
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="startButtonTapped" destination="MYa-ht-dp4" id="aeZ-vP-p7H"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="2" right="2" top="2" bottom="2"/>
+                        </group>
+                        <label width="1" alignment="left" verticalAlignment="center" hidden="YES" text="Please send Prompts from your iPhone" textAlignment="center" numberOfLines="0" id="xhQ-8u-Yfi"/>
+                    </items>
+                    <menu key="menu" id="vdl-sC-NAN">
+                        <items>
+                            <menuItem title="Stop" icon="pause" id="VKW-ff-m26">
+                                <connections>
+                                    <action selector="menuStopButtonTapped" destination="MYa-ht-dp4" id="9iY-rS-tjh"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Continue" icon="play" id="o3G-1Z-4EL"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="backwardButton" destination="bTA-5O-sUL" id="6we-mq-i2q"/>
+                        <outlet property="currentPromptNumberLabel" destination="Z1b-uE-Eyi" id="zw3-GF-lZw"/>
+                        <outlet property="forwardButton" destination="b22-oM-dJA" id="4ZW-vq-GvA"/>
+                        <outlet property="loadPromptsLabel" destination="xhQ-8u-Yfi" id="OVs-Mp-MgN"/>
+                        <outlet property="promptLabel" destination="GOm-u3-faf" id="knr-fR-QOQ"/>
+                        <outlet property="promptsGroup" destination="1bh-hy-aMz" id="ETr-f4-64R"/>
+                        <outlet property="startGroup" destination="5ck-bC-com" id="MSX-M9-cFf"/>
+                        <segue destination="njH-1h-i9U" kind="relationship" relationship="nextPage" id="Dxo-8k-pzV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="97" y="151"/>
+        </scene>
+        <!--Details Interface Controller-->
+        <scene sceneID="JAJ-Py-O7b">
+            <objects>
+                <controller hidesWhenLoading="NO" id="njH-1h-i9U" customClass="DetailsInterfaceController" customModule="On_Q_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="I9T-vk-683"/>
+                    </items>
+                    <connections>
+                        <outlet property="detailsLabel" destination="I9T-vk-683" id="gwh-yH-a9u"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="306" y="151"/>
+        </scene>
+    </scenes>
+</document>

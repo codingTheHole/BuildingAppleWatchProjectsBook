@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="C_Quence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35A-Ti-9wu">
+                                <rect key="frame" x="226" y="285" width="148" height="30"/>
+                                <state key="normal" title="Send Name To Watch"/>
+                                <connections>
+                                    <action selector="saveNameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aPU-EL-HeX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-8R-VHH">
+                                <rect key="frame" x="252" y="247" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="N9P-L2-0Ra"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="35A-Ti-9wu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Xj-HW-tPb"/>
+                            <constraint firstItem="35A-Ti-9wu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LZs-lA-cdb"/>
+                            <constraint firstItem="35A-Ti-9wu" firstAttribute="top" secondItem="kOz-8R-VHH" secondAttribute="bottom" constant="8" id="dJB-B6-ncu"/>
+                            <constraint firstItem="kOz-8R-VHH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qa1-oC-plE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerNameTextField" destination="kOz-8R-VHH" id="Wo6-ZA-8Py"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
